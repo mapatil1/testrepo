@@ -1,0 +1,12 @@
+{
+"compilerOptions": {
+"target": "ES2020",
+"module": "NodeNext",
+"moduleResolution": "NodeNext",
+"types": ["node", "@playwright/test"],
+"strict": true,
+"esModuleInterop": true,
+"outDir": "dist"
+},
+"include": ["**/*.ts", "tests/sauceDemo/getApi.spec ts", "tests/sauceDemo/api.spec ts", "tests/sauceDemo/loginToSauceDemo.spec.ts"]
+}

@@ -1,0 +1,27 @@
+{
+  "name": "playwright-ts-framework",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "test": "playwright test",
+    "test:orangehrm": "playwright test tests/orangehrm.spec.ts",
+    "test:orangehrm:headed": "playwright test tests/orangehrm.spec.ts --headed",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui",
+    "test:debug": "PWDEBUG=1 playwright test",
+    "test:smoke": "playwright test tests/smoke",
+    "report": "playwright show-report",
+    "codegen": "playwright codegen",
+    "allure:generate": "allure generate --clean ./allure-results -o ./allure-report",
+    "allure:open": "allure open ./allure-report"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.63.0",
+    "@types/node": "^25.4.0",
+    "allure-playwright": "^2.15.0",
+    "typescript": "^5.5.0"
+  },
+  "dependencies": {
+    "dotenv": "^17.3.1"
+  }
+}
