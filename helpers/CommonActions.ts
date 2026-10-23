@@ -20,8 +20,7 @@ export class CommonActions {
   }
 
   private async verifyToastMessage(message: string): Promise<void> {
-    const toastMessage = this.page.getByText('Successfully Saved');
+    const toastMessage = this.page.getByText(message, { exact: true });
     await expect(toastMessage).toBeVisible();
-    await expect(toastMessage).toContainText(message);
   }
 }
