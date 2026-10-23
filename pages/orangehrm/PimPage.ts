@@ -24,7 +24,10 @@ export class PimPage {
   }
 
   async searchEmployee(fullName: string): Promise<void> {
-    const employeeNameInput = this.page.getByPlaceholder('Type for hints...');
+    const employeeNameInput = this.page
+      .locator('.oxd-input-group')
+      .filter({ has: this.page.getByText('Employee Name', { exact: true }) })
+      .getByPlaceholder('Type for hints...');
     await employeeNameInput.fill(fullName);
     await this.page
       .locator('.oxd-autocomplete-option')
