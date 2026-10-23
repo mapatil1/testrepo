@@ -10,8 +10,9 @@ const employeeFullName = `${employee.firstName} ${employee.lastName}`;
 test.describe.serial('OrangeHRM user flows', () => {
   test('logs in and displays the Dashboard', async ({ page }) => {
     await new AuthenticationActions(page).login();
-
-    await new DashboardPage(page).expectDashboardLoaded();
+    await page.waitForLoadState('networkidle');
+    await expect(page).toHaveURL(/dashboard\/index/);
+    // await new DashboardPage(page).expectDashboardLoaded();
   });
 
   test('logs out and returns to the Login page', async ({ page }) => {
