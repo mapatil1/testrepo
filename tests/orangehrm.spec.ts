@@ -7,8 +7,8 @@ import { commonTestData } from '../test-data/commonTestData.js';
 const { employee } = commonTestData;
 const employeeFullName = `${employee.firstName} ${employee.lastName}`;
 
-// test.describe.serial('OrangeHRM user flows', () => {
-test.describe('OrangeHRM user flows', () => {
+ test.describe.serial('OrangeHRM user flows', () => {
+// test.describe('OrangeHRM user flows', () => {
   test('logs in and displays the Dashboard', async ({ page }) => {
     await new AuthenticationActions(page).login();
 
