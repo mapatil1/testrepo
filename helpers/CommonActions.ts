@@ -20,7 +20,7 @@ export class CommonActions {
   }
 
   private async verifyToastMessage(message: string): Promise<void> {
-    const toastMessage = this.page.locator('.oxd-toast-content-text');
+    const toastMessage = this.page.getByText('Successfully Saved');
     await expect(toastMessage).toBeVisible();
     await expect(toastMessage).toContainText(message);
   }
