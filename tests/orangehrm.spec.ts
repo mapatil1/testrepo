@@ -37,5 +37,4 @@ test.describe.serial('OrangeHRM user flows', () => {
       page.getByRole('row').filter({ hasText: employeeFullName }),
     ).toBeVisible();
   });
-  // console.log();
 });
