@@ -1,0 +1,13 @@
+{
+  "servers": {
+    "jira": {
+      "type": "stdio",
+      "command": "node",
+      "args": [
+        "--import",
+        "tsx",
+        "${workspaceFolder}/mcp/jira-server.ts"
+      ]
+    }
+  }
+}
